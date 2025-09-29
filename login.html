@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Entrar — HABIT</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="brand container">
+      <div class="logo">HABIT</div>
+      <nav class="nav" aria-label="Main Navigation">
+        <a href="posts.html">Início</a>
+        <a href="#">Páginas</a>
+        <a href="#">Destaques</a>
+        <a href="#">Assinar</a>
+        <a href="usuarios.html">Admin</a>
+      </nav>
+    </div>
+    <div class="actions container">
+      <div class="search" role="search">
+        <label for="search-input" class="sr-only">Buscar</label>
+        <input id="search-input" type="text" placeholder="Buscar...">
+        <button aria-label="Buscar">Buscar</button>
+      </div>
+      <a class="btn" href="login.html">Entrar</a>
+    </div>
+  </header>
+
+  <main class="center-screen container">
+    <section class="auth-card card">
+      <h1>Entrar</h1>
+      <form action="#" method="post" aria-label="Formulário de login">
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input id="email" name="email" type="email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Senha</label>
+          <input id="password" name="password" type="password" required>
+        </div>
+        <div class="auth-actions">
+          <button class="btn primary" type="submit">Entrar</button>
+          <button class="btn ghost" type="button">Entrar com Google</button>
+        </div>
+        <div style="margin-top:.5rem;display:flex;justify-content:space-between">
+          <a href="#">Esqueci a senha</a>
+          <a href="cadastro.html">Criar conta</a>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <div class="links">
+      <a href="#">Instagram</a>
+      <a href="#">Work</a>
+      <a href="#">Bags</a>
+      <a href="#">Lamp</a>
+      <a href="#">Books</a>
+    </div>
+    <div style="margin-top:.75rem">© 2025 Meu Site - Meu site.</div>
+  </footer>
+</body>
+</html>
