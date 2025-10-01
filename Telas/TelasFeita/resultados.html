@@ -4,30 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resultados de Busca</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header class="site-header">
-        <div class="container">
-            <div class="logo">HABIT</div>
-            <nav class="main-nav">
-                <a href="#">Início</a>
-                <a href="#">Páginas</a>
-                <a href="#">Destaques</a>
-                <a href="#">Assinar</a>
-                <a href="#">Admin</a>
-            </nav>
-            <div class="header-actions">
-                <input type="search" class="search-box" placeholder="Buscar...">
-                <button type="button" class="btn-search">Buscar</button>
-                <button type="button" class="btn-login">Entrar</button>
-            </div>
-        </div>
-    </header>
+    <header class="header">
+    <div class="brand container">
+      <div class="logo">HABIT</div>
+      <nav class="nav" aria-label="Main Navigation">
+        <a href="posts.html">Início</a>
+        <a href="#">Páginas</a>
+        <a href="#">Destaques</a>
+        <a href="#">Assinar</a>
+        <a href="usuarios.html">Admin</a>
+      </nav>
+    </div>
+    <div class="actions container">
+      <div class="search" role="search">
+        <label for="search-input" class="sr-only">Buscar</label>
+        <input id="search-input" type="text" placeholder="Buscar...">
+        <button aria-label="Buscar">Buscar</button>
+      </div>
+      <a class="btn" href="login.html">Entrar</a>
+    </div>
+  </header>
 
     <main class="site-main">
         <div class="container">
@@ -93,18 +96,18 @@
         </div>
     </main>
 
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-tags">
-                <a href="#" class="tag-link">Instagram</a>
-                <a href="#" class="tag-link">Work</a>
-                <a href="#" class="tag-link">Bags</a>
-                <a href="#" class="tag-link">Lamp</a>
-                <a href="#" class="tag-link">Books</a>
-            </div>
-            <p class="copyright-text">© 2025 Meu Site • Meu site</p>
-        </div>
-    </footer>
+    <footer class="footer container">
+    <div class="links">
+      <a href="#">Instagram <img src="assets/Insta.png" alt=""></a>
+      <a href="#">LinkedIn <img src="assets/LinkedIn.png" alt=""></a>
+      <a href="#">Bags</a>
+      <a href="#">Lamp</a>
+      <a href="#">Books</a>
+    </div>
+    <div style="margin-top:.75rem">© 2025 Meu Site - Meu site.</div>
+  </footer>
+</body>
+</html>
 
 </body>
 </html>
