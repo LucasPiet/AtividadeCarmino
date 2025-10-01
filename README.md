@@ -5,11 +5,11 @@
 - cadastro.html — Tela de criação de conta
 - perfil.html — Perfil do usuário + postagens
 - usuarioCriarPost.html — Criação de post na tela do usuario
-- usuarioCriarPost.html — Criação de post na tela do usuario
-- usuarioCriarPost.html — Criação de post na tela do usuario
-- usuarioCriarPost.html — Criação de post na tela do usuario
-- usuarioCriarPost.html — Criação de post na tela do usuario
-- usuarioCriarPost.html — Criação de post na tela do usuario
+- usuarioCategorias.html — Criação de post na tela do usuario
+- usuarioEcolhaDoEditor.html — Criação de post na tela do usuario
+- usuarioFilaDeComentario.html — Criação de post na tela do usuario
+- usuarioFilaDeRevisão.html — Criação de post na tela do usuario
+- usuarioGerenciarUsuarios.html — Criação de post na tela do usuario
 - usuarioCriarPost.html — Criação de post na tela do usuario
 - assinatura.html — tela para a assinaura newletter
 - destaques.html — tela de destaques de post
