@@ -15,25 +15,27 @@
 </head>
 <body>
 
-    <!-- Cabeçalho -->
+    <!-- Cabeçalho Corrigido -->
     <header class="header">
-        <div class="brand">
-            <span class="logo">HABIT</span>
-        </div>
-        <nav class="nav">
-            <a href="#">Início</a>
-            <a href="#">Páginas</a>
-            <a href="#">Destaques</a>
-            <a href="#">Assinar</a>
-            <a href="#">Admin</a>
-        </nav>
-        <div class="actions">
-            <div class="search">
-                <input type="text" placeholder="Busca...">
-                <!-- Note que usei a classe "ghost" para os botões, para que fiquem com a borda, como na imagem -->
-                <button class="btn ghost">Busca</button>
+        <!-- A div container aqui dentro resolve o alinhamento -->
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+            <div class="brand">
+                <span class="logo">HABIT</span>
             </div>
-            <button class="btn ghost">Entrar</button>
+            <nav class="nav">
+                <a href="#">Início</a>
+                <a href="#">Páginas</a>
+                <a href="#">Destaques</a>
+                <a href="#">Assinar</a>
+                <a href="#">Admin</a>
+            </nav>
+            <div class="actions">
+                <div class="search">
+                    <input type="text" placeholder="Busca...">
+                    <button class="btn ghost">Busca</button>
+                </div>
+                <button class="btn ghost">Entrar</button>
+            </div>
         </div>
     </header>
 
@@ -78,8 +80,6 @@
                 </div>
             </article>
 
-            <!-- Adicione quantos mais resultados precisar -->
-
         </section>
     </main>
 
@@ -87,7 +87,6 @@
     <footer class="footer">
         <div class="container">
             <div class="links">
-                <!-- A classe "btn ghost" também funciona bem para os links do rodapé -->
                 <a href="#" class="btn ghost">Instagram</a>
                 <a href="#" class="btn ghost">Work</a>
                 <a href="#" class="btn ghost">Bags</a>
@@ -100,3 +99,4 @@
     
 </body>
 </html>
+
