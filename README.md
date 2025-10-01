@@ -4,11 +4,18 @@
 - login.html — Tela de login
 - cadastro.html — Tela de criação de conta
 - perfil.html — Perfil do usuário + postagens
-- posts.html — Listagem e gerenciamento de posts
-- comentarios.html — Fila de comentários
-- usuarios.html — Gerenciamento de usuários
-- editor.html — Editor de criação de post
-- tela-extra.html — Tela extra criada conforme pedido
+- usuarioCriarPost.html — Criação de post na tela do usuario
+- usuarioCriarPost.html — Criação de post na tela do usuario
+- usuarioCriarPost.html — Criação de post na tela do usuario
+- usuarioCriarPost.html — Criação de post na tela do usuario
+- usuarioCriarPost.html — Criação de post na tela do usuario
+- usuarioCriarPost.html — Criação de post na tela do usuario
+- usuarioCriarPost.html — Criação de post na tela do usuario
+- assinatura.html — tela para a assinaura newletter
+- destaques.html — tela de destaques de post
+- perfil.html — tela de perfil do usuario
+- resultados.html — tela de resultados de pesquisa feita pelo usuario
+- inicio.html — Tela inical do site
 
 ## Decisões de layout
 - Abordagem mobile-first com breakpoints para tablet e desktop.
