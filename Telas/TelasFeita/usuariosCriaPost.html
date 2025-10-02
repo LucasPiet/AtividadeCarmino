@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Posts — HABIT</title>
+  <title>Usuários — HABIT</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -11,7 +11,11 @@
     <div class="brand container">
       <div class="logo">HABIT</div>
       <nav class="nav" aria-label="Main Navigation">
-        <a href="posts.html">Início</a><a href="#">Páginas</a><a href="#">Destaques</a><a href="#">Assinar</a><a href="usuarios.html">Admin</a>
+        <a href="posts.html">Início</a>
+        <a href="#">Páginas</a>
+        <a href="#">Destaques</a>
+        <a href="#">Assinar</a>
+        <a href="usuarios.html">Admin</a>
       </nav>
     </div>
     <div class="actions container">
@@ -44,16 +48,16 @@
       <!-- Conteúdo -->
       <section>
         <!-- Métricas superiores -->
-        <div class="cards-row">
-          <div class="card"><div>Posts</div><strong>128</strong></div>
-          <div class="card"><div>Visualizações</div><strong>54k</strong></div>
-          <div class="card"><div>Inscritos</div><strong>12k</strong></div>
-          <div class="card"><div>Pendências</div><strong>7</strong></div>
+        <div class="card stats" style="margin-bottom:var(--md)">
+          <div class="stats"><div>Posts</div><strong>128</strong></div>
+          <div class="stats"><div>Visualizações</div><strong>54k</strong></div>
+          <div class="stats"><div>Inscritos</div><strong>12k</strong></div>
+          <div class="stats"><div>Pendências</div><strong>7</strong></div>
         </div>
 
         <!-- Criar Post -->
         <article class="card">
-          <h1>Criar Post</h1>
+          <h2>Criar Post</h2>
           <form action="#" method="post">
             <input type="text" placeholder="Título" aria-label="Título">
             <textarea rows="10" placeholder="Escreva aqui... (Editor simulador)" aria-label="Conteúdo"></textarea>
@@ -62,9 +66,9 @@
               <input type="file" accept="image/*" aria-label="Upload da imagem de capa">
             </div>
             <div class="actions-row">
-              <button type="button" class="btn">Salvar rascunho</button>
-              <button type="submit" class="btn">Enviar para revisão</button>
-              <button type="submit" class="btn">Publicar (admin)</button>
+              <button type="button" class="action-btn">Salvar rascunho</button>
+              <button type="submit" class="action-btn">Enviar para revisão</button>
+              <button type="submit" class="action-btn">Publicar (admin)</button>
             </div>
           </form>
         </article>

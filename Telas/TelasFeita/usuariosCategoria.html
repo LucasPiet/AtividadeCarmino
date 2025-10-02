@@ -20,7 +20,7 @@
     </div>
     <div class="actions container">
       <div class="search" role="search">
-        <label for="search-input" class="sr-only">Buscar</label>
+        <label for="search-input" class="sr-only"></label>
         <input id="search-input" type="text" placeholder="Buscar...">
         <button aria-label="Buscar">Buscar</button>
       </div>
@@ -49,23 +49,29 @@
         <div class="stat">Bloqueados: 3</div>
       </div>
 
-      <table class="table" aria-label="Tabela de usuários">
-        <thead><tr><th>Nome</th><th>E-mail</th><th>Status</th><th>Ações</th></tr></thead>
-        <tbody>
-          <tr>
-            <td>João</td>
-            <td>joao@example.com</td>
-            <td>Ativo</td>
-            <td class="actions"><button class="action-btn block">Bloquear</button></td>
-          </tr>
-          <tr>
-            <td>Maria</td>
-            <td>maria@example.com</td>
-            <td>Bloqueado</td>
-            <td class="actions"><button class="action-btn approve">Desbloquear</button></td>
-          </tr>
-        </tbody>
-      </table>
+      <article class="card">
+        <h2>Gerenciar Categorias</h2>
+        <input type="text" placeholder="Buscar categorias..">
+        
+        <h3>Categorias</h3>
+          <card>
+            <div class="card category-item">
+              <span>Tecnologia</span>
+              <button class="action-btn">Editar</button>
+              <button class="action-btn">Excluir</button>
+            </div>
+            <div class="card category-item">
+              <span>Saúde</span>
+              <button class="action-btn">Editar</button>
+              <button class="action-btn">Excluir</button>
+            </div>
+            <div class="card category-item">
+              <span>Viagens</span>
+              <button class="action-btn">Editar</button>
+              <button class="action-btn">Excluir</button>
+            </div>
+
+          </article>
     </section>
   </main>
   <footer class="footer container">© 2025 Meu Site - Meu site.</footer>
