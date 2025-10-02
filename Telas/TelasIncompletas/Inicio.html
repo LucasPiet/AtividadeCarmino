@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+  <!-- HEADER (mantido) -->
   <header class="header">
     <div class="brand container">
       <div class="logo">HABIT</div>
@@ -28,52 +29,101 @@
     </div>
   </header>
 
-    <main class="container">
-        <h1>Navegue por topicos</h1>
-        <div class="posts-grid">
-            <article class="post-card card">
-                <h3>Tecnologia</h3>
-                <p>Fique por dentro das últimas tendências e inovações tecnológicas que estão moldando o futuro.</p>
-                <div style="display:flex;justify-content:space-between;align-items:center;margin-top:.5rem">
-                    <div class="meta">1200 artigos</div>
-                    <div><a class="btn" href="#">Explorar</a></div>
-                </div>
-            </article>
-            <article class="post-card card">
-                <h3>Estilo</h3>
-                <p>Descubra dicas de moda, design e lifestyle para aprimorar seu estilo pessoal e viver com elegância.</p>
-                <div style="display:flex;justify-content:space-between;align-items:center;margin-top:.5rem">
-                    <div class="meta">850 artigos</div>
-                    <div><a class="btn" href="#">Explorar</a></div>
-                </div>
-            </article>
-            <article class="post-card card">
-                <h3>Viagens</h3>
-                <p>Explore destinos incríveis, dicas de viagem e experiências culturais ao redor do mundo.</p>
-                <div style="display:flex;justify-content:space-between;align-items:center;margin-top:.5rem">
-                    <div class="meta">600 artigos</div>
-                    <div><a class="btn" href="#">Explorar</a></div>
-                </div>
-            </article>
-            <article class="post-card card">
-                <h3>Saúde e Bem-estar</h3>
-                <p>Encontre conselhos sobre saúde física e mental, fitness e práticas de bem-estar para uma vida equilibrada.</p>
-                <div style="display:flex;justify-content:space-between;align-items:center;margin-top:.5rem">
-                    <div class="meta">400 artigos</div>
-                    <div><a class="btn" href="#">Explorar</a></div>
-                </div>
-            </article>
+  <!-- MAIN -->
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__content">
+        <h1>Navegue por tópicos de interesse</h1>
+        <p class="hero__subtitle">
+          Descubra conteúdos por categorias, posts em destaque e as escolhas do editor.
+        </p>
+        <div class="hero__actions">
+          <a href="#" class="btn">Explorar categorias</a>
+          <a href="#" class="btn">Assine a newsletter</a>
         </div>
-    </main>
-    <footer class="footer container">
+      </div>
+      <!-- box cinza da direita -->
+      <aside class="hero__aside card" aria-label="Destaque"></aside>
+    </section>
+
+    <!-- CATEGORIAS POPULARES -->
+    <section class="section">
+      <h2 class="section__title">Categorias Populares</h2>
+      <div class="grid grid--popular">
+        <a href="#" class="card">Work</a>
+        <a href="#" class="card">Books</a>
+        <a href="#" class="card">Techno</a>
+      </div>
+    </section>
+
+    <!-- TODAS AS CATEGORIAS -->
+    <section class="section">
+      <h2 class="section__title">Todas as Categorias</h2>
+      <nav class="tags" aria-label="Lista de categorias">
+        <a href="#" class="tag card">Negócios</a>
+        <a href="#" class="tag card">Techno</a>
+        <a href="#" class="tag card">Produtividade</a>
+        <a href="#" class="tag card">Filmes</a>
+        <a href="#" class="tag card">Lifestyle</a>
+        <a href="#" class="tag card">Educação</a>
+        <a href="#" class="tag card">Mailing</a>
+        <a href="#" class="tag card">eCommerce</a>
+        <a href="#" class="tag card">Alimentação</a>
+        <a href="#" class="tag card">Social</a>
+      </nav>
+    </section>
+
+    <!-- DESTAQUES + ESCOLHAS DO EDITOR (2 colunas) -->
+    <section class="section split">
+      <div class="split__left">
+        <h2 class="section__title">Postagens em Destaque</h2>
+
+        <article class="post-card card">
+          <div class="meta">
+            <time datetime="2025-07-31">31 Jul 2025</time> — Destaque
+          </div>
+          <h3 class="post__title">
+            <a href="#">Erros de Design que Todos Devem Evitar</a>
+          </h3>
+          <div class="meta">3 min de leitura</div>
+        </article>
+
+        <article class="post-card card">
+          <div class="meta">
+            <time datetime="2025-07-31">31 Jul 2025</time> — Destaque
+          </div>
+          <h3 class="post__title">
+            <a href="#">As Maiores Empresas por Receita</a>
+          </h3>
+          <div class="meta">3 min de leitura</div>
+        </article>
+      </div>
+
+      <aside class="split__right">
+        <div class="card">
+          <h3 class="section__title">Escolhas do Editor</h3>
+          <ul class="editor__list">
+            <li>Uso negativo da internet</li>
+            <li>O segredo do brainstorm</li>
+            <li>Escalar para pequenos negócios</li>
+            <li>O futuro do trabalho remoto</li>
+          </ul>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <!-- FOOTER (mantido) -->
+  <footer class="footer container">
     <div class="links">
       <a href="#">Instagram</a>
-      <a href="#">Facebook</a>
-      <a href="#">LinkedIn   <img src="assets/LinkedIn.png" alt=""></a>
+      <a href="#">Work</a>
+      <a href="#">Bags</a>
       <a href="#">Lamp</a>
       <a href="#">Books</a>
     </div>
-    <div style="margin-top:.75rem">© 2025 Meu Site - Meu site.</div>
+    <div>© 2025 Meu Site - Meu site.</div>
   </footer>
 </body>
 </html>

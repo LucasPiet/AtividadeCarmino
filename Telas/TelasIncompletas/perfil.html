@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+  <!-- HEADER (mantido) -->
   <header class="header">
     <div class="brand container">
       <div class="logo">HABIT</div>
@@ -28,40 +29,83 @@
     </div>
   </header>
 
+  <!-- MAIN -->
   <main class="container layout" aria-label="Perfil e postagens">
+    <!-- COLUNA ESQUERDA: PERFIL -->
     <aside class="sidebar card">
+      <h2 class="section__title">Perfil</h2>
+
       <div class="profile-card">
-        <img class="profile-avatar" src="assets/avatar-placeholder.png" alt="Avatar do usuário">
-        <h2>Nome do Usuário</h2>
-        <p class="muted">Bio curta sobre o usuário. Conte algo interessante.</p>
-        <div style="margin-top:.5rem"><button class="btn primary">Salvar</button></div>
+        <!-- quadro cinza grande -->
+        <div class="profile-avatar" aria-hidden="true"></div>
+
+        <form class="form" action="#" method="post">
+          <label class="sr-only" for="name">Nome</label>
+          <input id="name" type="text" placeholder="Nome">
+
+          <label class="sr-only" for="bio">Bio</label>
+          <textarea id="bio" placeholder="Bio"></textarea>
+
+          <div class="form__actions">
+            <button type="submit" class="btn primary">Salvar</button>
+          </div>
+        </form>
       </div>
     </aside>
 
-    <section>
+    <!-- COLUNA DIREITA: SUAS POSTAGENS -->
+    <section class="content">
       <h1>Suas Postagens</h1>
-      <div class="posts-grid">
-        <article class="post-card card">
-          <h3>Rascunho: Como escrever um bom texto</h3>
-          <div class="status">Rascunho</div>
-          <p>Resumo do post. Lorem ipsum dolor sit amet, consectetur.</p>
+
+      <div class="posts-list">
+        <!-- item 1 -->
+        <article class="post-card card post-item">
+          <div class="post-item__thumb" aria-hidden="true"></div>
+          <div class="post-item__body">
+            <div class="status">Rascunho</div>
+            <h3 class="post-item__title"><a href="#">Post 1</a></h3>
+          </div>
         </article>
-        <article class="post-card card">
-          <h3>Publicado: 10 dicas</h3>
-          <div class="status">Publicado</div>
-          <p>Resumo do post publicado.</p>
+
+        <!-- item 2 -->
+        <article class="post-card card post-item">
+          <div class="post-item__thumb" aria-hidden="true"></div>
+          <div class="post-item__body">
+            <div class="status">Publicado</div>
+            <h3 class="post-item__title"><a href="#">Post 2</a></h3>
+          </div>
         </article>
-        <article class="post-card card">
-          <h3>Em análise: Revisão de conteúdo</h3>
-          <div class="status">Em análise</div>
-          <p>Post aguardando revisão pelo editor.</p>
+
+        <!-- item 3 -->
+        <article class="post-card card post-item">
+          <div class="post-item__thumb" aria-hidden="true"></div>
+          <div class="post-item__body">
+            <div class="status">Em análise</div>
+            <h3 class="post-item__title"><a href="#">Comentário 1</a></h3>
+          </div>
+        </article>
+
+        <!-- item 4 -->
+        <article class="post-card card post-item">
+          <div class="post-item__thumb" aria-hidden="true"></div>
+          <div class="post-item__body">
+            <div class="status">Publicado</div>
+            <h3 class="post-item__title"><a href="#">Comentário 2</a></h3>
+          </div>
         </article>
       </div>
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer class="footer container">
-    <div class="links"><a href="#">Instagram</a><a href="#">Books</a></div>
+    <div class="links">
+      <a href="#">Instagram</a>
+      <a href="#">Work</a>
+      <a href="#">Bags</a>
+      <a href="#">Lamp</a>
+      <a href="#">Books</a>
+    </div>
     <div style="margin-top:.75rem">© 2025 Meu Site - Meu site.</div>
   </footer>
 </body>
