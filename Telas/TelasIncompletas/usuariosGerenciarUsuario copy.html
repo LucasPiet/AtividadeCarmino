@@ -19,7 +19,7 @@
       </nav>
     </div>
     <div class="actions container">
-      <div class="search" role="search">
+      <div class="search" role="search" aria-label="Buscar">
         <label for="search-input" class="sr-only">Buscar</label>
         <input id="search-input" type="text" placeholder="Buscar...">
         <button aria-label="Buscar">Buscar</button>
@@ -43,10 +43,14 @@
 
     <section>
       <h1>Gerenciamento de Usuários</h1>
+      <div role="search" class="search" aria-label="Buscar Usuários"></div>
+        <label for="user-search" class="sr-only">Buscar Usuários</label>
+        <input id="user-search" type="text" placeholder="Buscar usuários...">
+      
       <div class="card stats" style="margin-bottom:var(--md)">
-        <div class="stat">Total: 1.234</div>
-        <div class="stat">Online: 52</div>
-        <div class="stat">Bloqueados: 3</div>
+        <button class="stat">Total: 2</button>
+        <button class="stat">Online: 1</button>
+        <button class="stat">Bloqueados: 1</button>
       </div>
 
       <table class="table" aria-label="Tabela de usuários">
