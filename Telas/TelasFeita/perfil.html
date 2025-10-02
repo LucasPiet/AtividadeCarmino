@@ -7,106 +7,103 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <!-- HEADER (mantido) -->
   <header class="header">
-    <div class="brand container">
-      <div class="logo">HABIT</div>
-      <nav class="nav" aria-label="Main Navigation">
-        <a href="posts.html">Início</a>
-        <a href="#">Páginas</a>
-        <a href="#">Destaques</a>
-        <a href="#">Assinar</a>
-        <a href="usuarios.html">Admin</a>
-      </nav>
-    </div>
-    <div class="actions container">
-      <div class="search" role="search">
-        <label for="search-input" class="sr-only">Buscar</label>
-        <input id="search-input" type="text" placeholder="Buscar...">
-        <button aria-label="Buscar">Buscar</button>
+    <div class="header-content container">
+      <div class="brand">
+        <div class="logo">HABIT</div>
+        <nav class="nav" aria-label="Navegação Principal">
+          <a href="Inicio.html">Início</a>
+          <a href="usuariosCategoria.html">Páginas</a>
+          <a href="destaques.html">Destaques</a>
+          <a href="newsletter.html">Assinar</a>
+          <a href="perfil.html">Admin</a>
+        </nav>
       </div>
-      <a class="btn" href="login.html">Entrar</a>
+      <div class="actions">
+        <div class="search" role="search">
+          <label for="search-input" class="sr-only">Buscar no site</label>
+          <input id="search-input" type="text" placeholder="Buscar...">
+          <button class="btn ghost" aria-label="Buscar">Buscar</button>
+        </div>
+        <a class="btn" href="login.html">Entrar</a>
+      </div>
     </div>
   </header>
 
-  <!-- MAIN -->
-  <main class="container layout" aria-label="Perfil e postagens">
-    <!-- COLUNA ESQUERDA: PERFIL -->
-    <aside class="sidebar card">
-      <h2 class="section__title">Perfil</h2>
+  <main class="container">
+    <section>
+      <h1>Meu Perfil</h1>
 
-      <div class="profile-card">
-        <!-- quadro cinza grande -->
-        <div class="profile-avatar" aria-hidden="true"></div>
-
-        <form class="form" action="#" method="post">
-          <label class="sr-only" for="name">Nome</label>
-          <input id="name" type="text" placeholder="Nome">
-
-          <label class="sr-only" for="bio">Bio</label>
-          <textarea id="bio" placeholder="Bio"></textarea>
-
-          <div class="form__actions">
-            <button type="submit" class="btn primary">Salvar</button>
+      <div class="profile-grid admin-grid" style="
+        /* A classe admin-grid já define o comportamento responsivo de grid */
+      ">
+        
+        <aside class="sidebar card">
+          <h2>Informações Pessoais</h2>
+          <div style="text-align:center; margin-bottom:var(--lg)">
+            <div style="width:80px; height:80px; border-radius:50%; background:var(--card-background-admin); margin:0 auto var(--sm);"></div>
+            <p style="font-size:var(--h3); margin:0;">**Carmino Santos**</p>
+            <p style="color:var(--muted); font-size:var(--small); margin:0;">carmino.santos@email.com</p>
           </div>
-        </form>
+          <form action="#" method="post">
+            <div class="form-group">
+              <label for="display-name">Nome de Exibição</label>
+              <input id="display-name" type="text" value="Carmino Santos">
+            </div>
+            <div class="form-group">
+              <label for="bio">Biografia</label>
+              <textarea id="bio" rows="3">Desenvolvedor Front-End e entusiasta de HTML5 e CSS3.</textarea>
+            </div>
+            <button class="btn" style="width:100%; margin-top:var(--md)">Salvar Alterações</button>
+          </form>
+        </aside>
+
+        <div class="content">
+          <h2>Minha Atividade Recente</h2>
+          
+          <div class="stats-container">
+            <div class="stat">Posts Publicados: **2**</div>
+            <div class="stat">Comentários: **4**</div>
+            <div class="stat">Rascunhos: **1**</div>
+          </div>
+
+          <h3 style="margin-top:var(--lg)">Meus Conteúdos</h3>
+          <div class="posts-list" style="display:flex; flex-direction:column; gap:var(--md)">
+            
+            <article class="post-item card" style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; padding:var(--md) var(--lg);">
+              <div class="post-item__body" style="flex-grow:1;">
+                <h4 class="post-item__title" style="margin:0; font-size:var(--body)"><a href="#">Post 1: Como otimizar seu CSS com variáveis</a></h4>
+                <div class="status" style="font-size:var(--small); color:var(--success)">Publicado em 01/10/2025</div>
+              </div>
+              <div class="actions" style="margin-top:var(--sm); margin-bottom:var(--sm)">
+                <button class="action-btn ghost">Ver</button>
+                <button class="action-btn reject" style="background:var(--danger)">Excluir</button>
+              </div>
+            </article>
+
+            <article class="post-item card" style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; padding:var(--md) var(--lg);">
+              <div class="post-item__body" style="flex-grow:1;">
+                <h4 class="post-item__title" style="margin:0; font-size:var(--body)"><a href="#">Post 2: Rascunho de artigo sobre Grid Layout</a></h4>
+                <div class="status" style="font-size:var(--small); color:var(--muted)">Rascunho</div>
+              </div>
+              <div class="actions" style="margin-top:var(--sm); margin-bottom:var(--sm)">
+                <button class="action-btn ghost">Editar</button>
+                <button class="action-btn reject" style="background:var(--danger)">Excluir</button>
+              </div>
+            </article>
+            
+          </div>
+        </div>
       </div>
-    </aside>
-
-    <!-- COLUNA DIREITA: SUAS POSTAGENS -->
-    <section class="content">
-      <h1>Suas Postagens</h1>
-
-      <div class="posts-list">
-        <!-- item 1 -->
-        <article class="post-card card post-item">
-          <div class="post-item__thumb" aria-hidden="true"></div>
-          <div class="post-item__body">
-            <div class="status">Rascunho</div>
-            <h3 class="post-item__title"><a href="#">Post 1</a></h3>
-          </div>
-        </article>
-
-        <!-- item 2 -->
-        <article class="post-card card post-item">
-          <div class="post-item__thumb" aria-hidden="true"></div>
-          <div class="post-item__body">
-            <div class="status">Publicado</div>
-            <h3 class="post-item__title"><a href="#">Post 2</a></h3>
-          </div>
-        </article>
-
-        <!-- item 3 -->
-        <article class="post-card card post-item">
-          <div class="post-item__thumb" aria-hidden="true"></div>
-          <div class="post-item__body">
-            <div class="status">Em análise</div>
-            <h3 class="post-item__title"><a href="#">Comentário 1</a></h3>
-          </div>
-        </article>
-
-        <!-- item 4 -->
-        <article class="post-card card post-item">
-          <div class="post-item__thumb" aria-hidden="true"></div>
-          <div class="post-item__body">
-            <div class="status">Publicado</div>
-            <h3 class="post-item__title"><a href="#">Comentário 2</a></h3>
-          </div>
-        </article>
-      </div>
+      
     </section>
   </main>
 
-  <!-- FOOTER -->
   <footer class="footer container">
     <div class="links">
-      <a href="#">Instagram</a>
-      <a href="#">Work</a>
-      <a href="#">Bags</a>
-      <a href="#">Lamp</a>
-      <a href="#">Books</a>
+      <a href="#">Instagram</a><a href="#">Work</a><a href="#">Bags</a><a href="#">Lamp</a><a href="#">Books</a>
     </div>
-    <div style="margin-top:.75rem">© 2025 Meu Site - Meu site.</div>
+    <div>© 2025 Meu Site - Meu site.</div>
   </footer>
 </body>
 </html>

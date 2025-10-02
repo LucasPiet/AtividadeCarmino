@@ -3,84 +3,96 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Usuários — HABIT</title>
+  <title>Criar Post — HABIT</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <header class="header">
-    <div class="brand container">
-      <div class="logo">HABIT</div>
-      <nav class="nav" aria-label="Main Navigation">
-        <a href="posts.html">Início</a>
-        <a href="#">Páginas</a>
-        <a href="#">Destaques</a>
-        <a href="#">Assinar</a>
-        <a href="usuarios.html">Admin</a>
-      </nav>
-    </div>
-    <div class="actions container">
-      <div class="search" role="search">
-        <label for="search-input" class="sr-only">Buscar</label>
-        <input id="search-input" type="text" placeholder="Buscar...">
-        <button aria-label="Buscar">Buscar</button>
+     <div class="header-content container">
+      <div class="brand">
+        <div class="logo">HABIT</div>
+        <nav class="nav" aria-label="Navegação Principal">
+          <a href="Inicio.html">Início</a>
+          <a href="usuariosCategoria.html">Páginas</a>
+          <a href="destaques.html">Destaques</a>
+          <a href="newsletter.html">Assinar</a>
+          <a href="perfil.html">Admin</a>
+        </nav>
       </div>
-      <a class="btn" href="login.html">Entrar</a>
+      <div class="actions">
+        <div class="search" role="search">
+          <label for="search-input" class="sr-only">Buscar no site</label>
+          <input id="search-input" type="text" placeholder="Buscar...">
+          <button class="btn ghost" aria-label="Buscar" href = "resultados.html">Buscar</button>
+        </div>
+        <a class="btn" href="login.html">Entrar</a>
+      </div>
     </div>
   </header>
 
-  <main class="container" aria-label="Dashboard de posts">
-    <div class="layout">
-      <!-- Menu lateral -->
-      <aside class="sidebar card">
-        <nav aria-label="Menu">
-          <h2>Menu</h2>
-          <ul>
-            <li><a href="#">Categorias</a></li>
-            <li><a href="#">Criar Post</a></li>
-            <li><a href="#">Escolhas do Editor</a></li>
-            <li><a href="#">Usuários</a></li>
-            <li><a href="#">Fila de revisão</a></li>
-            <li><a href="#">Fila de comentários</a></li>
-          </ul>
-        </nav>
-      </aside>
+  <main class="container admin-grid" aria-label="Dashboard de posts">
+    <aside class="sidebar card" aria-label="Menu de Administração">
+      <nav>
+        <h2>Menu</h2>
+        <ul>
+          <li><a href="usuariosCategoria.html">Categorias</a></li>
+          <li><a href="usuariosCriaPost.html">Criar Post</a></li>
+          <li><a href="usuariosEscolhaDoEditor.html">Escolhas do Editor</a></li>
+          <li><a href="usuariosGerenciarUsuario.html">Usuários</a></li>
+          <li><a href="usuariosFilaDeRevisão.html">Fila de Revisão</a></li>
+          <li><a href="usuariosFilaDeComentario.html">Fila de Comentários</a></li>
+        </ul>
+      </nav>
+    </aside>
 
-      <!-- Conteúdo -->
-      <section>
-        <!-- Métricas superiores -->
-        <div class="card stats" style="margin-bottom:var(--md)">
-          <div class="stats"><div>Posts</div><strong>128</strong></div>
-          <div class="stats"><div>Visualizações</div><strong>54k</strong></div>
-          <div class="stats"><div>Inscritos</div><strong>12k</strong></div>
-          <div class="stats"><div>Pendências</div><strong>7</strong></div>
-        </div>
+    <section>
+      <h1>Criar Novo Post</h1>
+      
+      <div class="stats-container">
+        <div class="stat">Posts: <strong>128</strong></div>
+        <div class="stat">Visualizações: <strong>54k</strong></div>
+        <div class="stat">Inscritos: <strong>12k</strong></div>
+        <div class="stat">Pendências: <strong>7</strong></div>
+      </div>
 
-        <!-- Criar Post -->
-        <article class="card">
-          <h2>Criar Post</h2>
-          <form action="#" method="post">
-            <input type="text" placeholder="Título" aria-label="Título">
-            <textarea rows="10" placeholder="Escreva aqui... (Editor simulador)" aria-label="Conteúdo"></textarea>
-            <div class="fields-row">
-              <input type="text" placeholder="Categorias e tags" aria-label="Categorias e tags">
-              <input type="file" accept="image/*" aria-label="Upload da imagem de capa">
+      <article class="card">
+        <h2>Editor de Artigo</h2>
+        <form class="editor-form" action="#" method="post">
+          <div class="form-group">
+            <label for="post-title">Título do Post</label>
+            <input id="post-title" type="text" placeholder="Título do seu artigo" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="post-content">Conteúdo (Editor Simulador)</label>
+            <textarea id="post-content" rows="15" placeholder="Escreva aqui..." required></textarea>
+          </div>
+          
+          <div class="fields-row">
+            <div class="form-group">
+              <label for="post-tags">Categorias e Tags</label>
+              <input id="post-tags" type="text" placeholder="Ex: tecnologia, frontend, css3" aria-label="Categorias e tags">
             </div>
-            <div class="actions-row">
-              <button type="button" class="action-btn">Salvar rascunho</button>
-              <button type="submit" class="action-btn">Enviar para revisão</button>
-              <button type="submit" class="action-btn">Publicar (admin)</button>
+            <div class="form-group">
+              <label for="post-cover-image">Imagem de Capa (Upload)</label>
+              <input id="post-cover-image" type="file" accept="image/*" aria-label="Upload da imagem de capa">
             </div>
-          </form>
-        </article>
-      </section>
-    </div>
+          </div>
+          
+          <div class="actions-row">
+            <button type="button" class="btn ghost action-btn">Salvar rascunho</button>
+            <button type="button" class="btn action-btn primary">Enviar para Revisão</button>
+            <button type="submit" class="btn action-btn" style="background:var(--danger)">Publicar Imediatamente (Admin)</button>
+          </div>
+        </form>
+      </article>
+    </section>
   </main>
 
   <footer class="footer container">
     <div class="links">
       <a href="#">Instagram</a><a href="#">Work</a><a href="#">Bags</a><a href="#">Lamp</a><a href="#">Books</a>
     </div>
-    <div style="margin-top:.75rem">© 2025 Meu Site - Meu site.</div>
+    <div>© 2025 Meu Site - Meu site.</div>
   </footer>
 </body>
 </html>

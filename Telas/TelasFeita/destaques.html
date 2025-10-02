@@ -5,86 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HABIT - Destaques</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header class="header">
-        <div class="brand">
-            <span class="logo">HABIT</span>
-        </div>
-        <nav class="nav">
-            <a href="#">Início</a>
-            <a href="#">Páginas</a>
-            <a href="#">Destaques</a>
-            <a href="#">Assinar</a>
-            <a href="#">Admin</a>
-        </nav>
-        <div class="actions">
-            <div class="search">
-                <input type="text" placeholder="Buscar...">
-                <button>Buscar</button>
+        <div class="header-content container">
+            <div class="brand">
+                <div class="logo">HABIT</div>
+                <nav class="nav" aria-label="Navegação Principal">
+                    <a href="Inicio.html">Início</a>
+                    <a href="usuariosCategoria.html">Páginas</a>
+                    <a href="destaques.html">Destaques</a>
+                    <a href="newsletter.html">Assinar</a>
+                    <a href="perfil.html">Admin</a>
+                </nav>
             </div>
-            <button class="btn primary">Entrar</button>
+            <div class="actions">
+                <div class="search" role="search">
+                    <label for="search-input" class="sr-only">Buscar no site</label>
+                    <input id="search-input" type="text" placeholder="Buscar...">
+                    <button class="btn ghost" aria-label="Buscar">Buscar</button>
+                </div>
+                <a class="btn" href="login.html">Entrar</a>
+            </div>
         </div>
     </header>
 
-    <main class="container page-content">
-        <div class="highlights-container card">
-            <h2 class="page-title">Destaques</h2>
-            <div class="highlights-grid">
-                <div class="card highlight-item">
-                    <div class="highlight-image"></div>
-                    <p>Destaque 1</p>
-                </div>
-                <div class="card highlight-item">
-                    <div class="highlight-image"></div>
-                    <p>Destaque 2</p>
-                </div>
-                <div class="card highlight-item">
-                    <div class="highlight-image"></div>
-                    <p>Destaque 3</p>
-                </div>
-                <div class="card highlight-item">
-                    <div class="highlight-image"></div>
-                    <p>Destaque 4</p>
-                </div>
-                <div class="card highlight-item">
-                    <div class="highlight-image"></div>
-                    <p>Destaque 5</p>
-                </div>
-                <div class="card highlight-item">
-                    <div class="highlight-image"></div>
-                    <p>Destaque 6</p>
-                </div>
-                <div class="card highlight-item">
-                    <div class="highlight-image"></div>
-                    <p>Destaque 7</p>
-                </div>
-                <div class="card highlight-item">
-                    <div class="highlight-image"></div>
-                    <p>Destaque 8</p>
-                </div>
-                <div class="card highlight-item">
-                    <div class="highlight-image"></div>
-                    <p>Destaque 9</p>
-                </div>
+    <main class="container">
+        <section>
+            <h1>Destaques da Semana</h1>
+            <p>Os artigos e tópicos mais quentes selecionados para você.</p>
+
+            <div class="highlight-grid" style="
+                /* Estilos inline para demonstração de grid responsivo */
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: var(--lg);
+                margin-top: var(--xl);
+            ">
+                <article class="card highlight-item" style="text-align:center;">
+                    <div class="highlight-image" style="height:150px; background:var(--card-background-admin); border-radius:var(--radius); margin-bottom:var(--md)"></div>
+                    <h2><a href="#">Destaque 1: Como o Flexbox revolucionou o layout</a></h2>
+                    <p style="color:var(--muted); font-size:var(--small)">Por Carmino | 10 min de leitura</p>
+                </article>
+                <article class="card highlight-item" style="text-align:center;">
+                    <div class="highlight-image" style="height:150px; background:var(--card-background-admin); border-radius:var(--radius); margin-bottom:var(--md)"></div>
+                    <h2><a href="#">Destaque 2: Os 5 melhores livros de produtividade</a></h2>
+                    <p style="color:var(--muted); font-size:var(--small)">Por Maria | 8 min de leitura</p>
+                </article>
+                <article class="card highlight-item" style="text-align:center;">
+                    <div class="highlight-image" style="height:150px; background:var(--card-background-admin); border-radius:var(--radius); margin-bottom:var(--md)"></div>
+                    <h2><a href="#">Destaque 3: Guia completo de Media Queries</a></h2>
+                    <p style="color:var(--muted); font-size:var(--small)">Por João | 15 min de leitura</p>
+                </article>
+                <article class="card highlight-item" style="text-align:center;">
+                    <div class="highlight-image" style="height:150px; background:var(--card-background-admin); border-radius:var(--radius); margin-bottom:var(--md)"></div>
+                    <h2><a href="#">Destaque 4: Dicas para um código mais limpo</a></h2>
+                    <p style="color:var(--muted); font-size:var(--small)">Por Ana | 7 min de leitura</p>
+                </article>
             </div>
-        </div>
+        </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer container">
         <div class="links">
-            <a href="#" class="btn ghost">Instagram</a>
-            <a href="#" class="btn ghost">Work</a>
-            <a href="#" class="btn ghost">Bags</a>
-            <a href="#" class="btn ghost">Lamp</a>
-            <a href="#" class="btn ghost">Books</a>
+            <a href="#">Instagram</a>
+            <a href="#">Work</a>
+            <a href="#">Bags</a>
+            <a href="#">Lamp</a>
+            <a href="#">Books</a>
         </div>
-        <small>© 2025 Meu Site • Meu site</small>
+        <div>© 2025 Meu Site - Meu site.</div>
     </footer>
-    
 </body>
 </html>

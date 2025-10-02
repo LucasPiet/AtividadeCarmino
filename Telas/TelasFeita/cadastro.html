@@ -8,23 +8,25 @@
 </head>
 <body>
   <header class="header">
-    <div class="brand container">
-      <div class="logo"><img src="assets/logo.png" alt="">HABIT</div>
-      <nav class="nav" aria-label="Main Navigation">
-        <a href="Inicio.html">Início</a>
-        <a href="#">Páginas</a>
-        <a href="#">Destaques</a>
-        <a href="#">Assinar</a>
-        <a href="usuarios.html">Admin</a>
-      </nav>
-    </div>
-    <div class="actions container">
-      <div class="search" role="search">
-        <label for="search-input" class="sr-only">Buscar</label>
-        <input id="search-input" type="text" placeholder="Buscar...">
-        <button aria-label="Buscar">Buscar</button>
+    <div class="header-content container">
+      <div class="brand">
+        <div class="logo">HABIT</div>
+        <nav class="nav" aria-label="Navegação Principal">
+          <a href="Inicio.html">Início</a>
+          <a href="usuariosCategoria.html">Páginas</a>
+          <a href="destaques.html">Destaques</a>
+          <a href="newsletter.html">Assinar</a>
+          <a href="perfil.html">Admin</a>
+        </nav>
       </div>
-      <a class="btn" href="login.html">Entrar</a>
+      <div class="actions">
+        <div class="search" role="search">
+          <label for="search-input" class="sr-only">Buscar no site</label>
+          <input id="search-input" type="text" placeholder="Buscar...">
+          <button class="btn ghost" aria-label="Buscar">Buscar</button>
+        </div>
+        <a class="btn" href="login.html">Entrar</a>
+      </div>
     </div>
   </header>
 
@@ -37,22 +39,27 @@
           <input id="name" name="name" type="text" required>
         </div>
         <div class="form-group">
-          <label for="email2">E-mail</label>
-          <input id="email2" name="email" type="email" required>
+          <label for="name">Email</label>
+          <input id="name" name="name" type="email" required>
         </div>
         <div class="form-group">
-          <label for="pwd">Senha</label>
-          <input id="pwd" name="pwd" type="password" required>
+          <label for="name">Senha</label>
+          <input id="name" name="name" type="password" required>
         </div>
         <div class="form-group">
-          <label for="pwd2">Confirmar senha</label>
-          <input id="pwd2" name="pwd2" type="password" required>
+          <label for="name">Confimar Senha</label>
+          <input id="name" name="name" type="password" required>
         </div>
         <div class="form-group">
-          <label><input type="checkbox" required> Aceito os termos de uso</label>
+          <label class="checkbox-label">
+            <input type="checkbox" required> Aceito os **termos de uso**
+          </label>
         </div>
-        <div>
-          <button class="btn primary" type="submit">Cadastrar</button>
+        <div class="auth-actions">
+          <button class="btn" type="submit">Cadastrar</button>
+        </div>
+        <div style="margin-top:var(--md); text-align:center;">
+          Já tem conta? <a href="login.html">Faça login</a>
         </div>
       </form>
     </section>
@@ -60,15 +67,13 @@
 
   <footer class="footer container">
     <div class="links">
-      <a href="#">Instagram <img src="assets/Insta.png" alt=""></a>
-      <a href="#">LinkedIn <img src="assets/LinkedIn.png" alt=""></a>
+      <a href="#">Instagram</a>
+      <a href="#">Work</a>
       <a href="#">Bags</a>
       <a href="#">Lamp</a>
       <a href="#">Books</a>
     </div>
-    <div style="margin-top:.75rem">© 2025 Meu Site - Meu site.</div>
+    <div>© 2025 Meu Site - Meu site.</div>
   </footer>
-</body>
-</html>
 </body>
 </html>

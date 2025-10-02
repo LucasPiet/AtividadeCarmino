@@ -3,71 +3,112 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Usuários — HABIT</title>
+  <title>Gerenciamento de Usuários — HABIT</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <header class="header">
-    <div class="brand container">
-      <div class="logo">HABIT</div>
-      <nav class="nav" aria-label="Main Navigation">
-        <a href="posts.html">Início</a>
-        <a href="#">Páginas</a>
-        <a href="#">Destaques</a>
-        <a href="#">Assinar</a>
-        <a href="usuarios.html">Admin</a>
-      </nav>
-    </div>
-    <div class="actions container">
-      <div class="search" role="search">
-        <label for="search-input" class="sr-only">Buscar</label>
-        <input id="search-input" type="text" placeholder="Buscar...">
-        <button aria-label="Buscar">Buscar</button>
+    <div class="header-content container">
+      <div class="brand">
+        <div class="logo">HABIT</div>
+        <nav class="nav" aria-label="Navegação Principal">
+          <a href="Inicio.html">Início</a>
+          <a href="usuariosCategoria.html">Páginas</a>
+          <a href="destaques.html">Destaques</a>
+          <a href="newsletter.html">Assinar</a>
+          <a href="perfil.html">Admin</a>
+        </nav>
       </div>
-      <a class="btn" href="login.html">Entrar</a>
+      <div class="actions">
+        <div class="search" role="search">
+          <label for="search-input" class="sr-only">Buscar no site</label>
+          <input id="search-input" type="text" placeholder="Buscar...">
+          <button class="btn ghost" aria-label="Buscar" href = "resultados.html">Buscar</button>
+        </div>
+        <a class="btn" href="login.html">Entrar</a>
+      </div>
     </div>
   </header>
-  <main class="container admin-grid">
-    <aside class="sidebar card">
-      <nav aria-label="Admin Menu">
-        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.5rem">
-          <li><a href="#">Categorias</a></li>
-          <li><a href="editor.html">Criar Post</a></li>
-          <li><a href="#">Escolhas do Editor</a></li>
-          <li><a href="#">Usuários</a></li>
-          <li><a href="comentarios.html">Fila de Revisão</a></li>
-          <li><a href="comentarios.html">Fila de Comentários</a></li>
+
+
+   <main class="container admin-grid" aria-label="Dashboard de posts">
+    <aside class="sidebar card" aria-label="Menu de Administração">
+      <nav>
+        <h2>Menu</h2>
+        <ul>
+          <li><a href="usuariosCategoria.html">Categorias</a></li>
+          <li><a href="usuariosCriaPost.html">Criar Post</a></li>
+          <li><a href="usuariosEscolhaDoEditor.html">Escolhas do Editor</a></li>
+          <li><a href="usuariosGerenciarUsuario.html">Usuários</a></li>
+          <li><a href="usuariosFilaDeRevisão.html">Fila de Revisão</a></li>
+          <li><a href="usuariosFilaDeComentario.html">Fila de Comentários</a></li>
         </ul>
       </nav>
     </aside>
-
     <section>
-      <h1>Gerenciamento de Usuários</h1>
-      <div class="card stats" style="margin-bottom:var(--md)">
-        <div class="stat">Total: 1.234</div>
-        <div class="stat">Online: 52</div>
-        <div class="stat">Bloqueados: 3</div>
-      </div>
+      <section>
+          <h1>Fila de Revisão de Posts</h1>
+          <div class="stats-container">
+            <div class="stat">Total: 3</div>
+            <div class="stat">Urgente: 2</div>
+            <div class="stat">Média: 1</div>
+          </div>
+          
+          <div class="table-container card">
+            <table class="table" aria-label="Tabela de posts na fila de revisão">
+               <h2>Fila de comentários</h2>
+                <div class="form-group search-admin">
+                  <label for="category-search" class="sr-only">Buscar...</label>
+                  <input id="category-search" type="text" placeholder="Buscar comentarios...">
+        </div>
+              <thead>
+                <tr>
+                  <th>Título</th>
+                  <th>Autor</th>
+                  <th>Status</th>
+                  <th>Ações</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Comentario #1</td>
+                  <td>João</td>
+                  <td>Em Revisão</td>
+                  <td class="actions">
+                    <button class="action-btn approve">Aprovar</button>
+                    <button class="action-btn reject">Rejeitar</button>
+                </td>
+                </tr>
+                <tr>
+                   <td>Comentario #2</td>
+                  <td>Pedro</td>
+                  <td>Em revisão</td>
+                  <td class="actions">
+                    <button class="action-btn approve">Aprovar</button>
+                    <button class="action-btn reject">Rejeitar</button>
+                </td>
+                </tr>
+                <tr>
+                <td>Comentario #3</td>
+                  <td>Larissa</td>
+                  <td>Em resvisão</td>
+                  <td class="actions">
+                    <button class="action-btn approve">Aprovar</button>
+                    <button class="action-btn reject">Rejeitar</button>
+                </td>
+                </tr>
+                </tbody>
+            </table>
+          </div>
 
-      <table class="table" aria-label="Tabela de usuários">
-        <thead><tr><th>Nome</th><th>E-mail</th><th>Status</th><th>Ações</th></tr></thead>
-        <tbody>
-          <tr>
-            <td>João</td>
-            <td>joao@example.com</td>
-            <td>Ativo</td>
-            <td class="actions"><button class="action-btn block">Bloquear</button></td>
-          </tr>
-          <tr>
-            <td>Maria</td>
-            <td>maria@example.com</td>
-            <td>Bloqueado</td>
-            <td class="actions"><button class="action-btn approve">Desbloquear</button></td>
-          </tr>
-        </tbody>
-      </table>
     </section>
   </main>
-  <footer class="footer container">© 2025 Meu Site - Meu site.</footer>
+
+  <footer class="footer container">
+    <div class="links">
+      <a href="#">Instagram</a><a href="#">Work</a><a href="#">Bags</a><a href="#">Lamp</a><a href="#">Books</a>
+    </div>
+    <div>© 2025 Meu Site - Meu site.</div>
+  </footer>
 </body>
 </html>

@@ -3,100 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resultados para "trabalho remoto"</title>
-    
-    <!-- Link para seu arquivo CSS principal -->
+    <title>Resultados da Busca — HABIT</title>
     <link rel="stylesheet" href="css/styles.css">
-
-    <!-- Fonte Inter do Google Fonts (opcional, mas recomendada pelo seu CSS) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Cabeçalho Corrigido -->
     <header class="header">
-        <!-- A div container aqui dentro resolve o alinhamento -->
-        <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+        <div class="header-content container">
             <div class="brand">
-                <span class="logo">HABIT</span>
+                <div class="logo">HABIT</div>
+                <nav class="nav" aria-label="Navegação Principal">
+                    <a href="Inicio.html">Início</a>
+                    <a href="usuariosCategoria.html">Páginas</a>
+                    <a href="destaques.html">Destaques</a>
+                    <a href="newsletter.html">Assinar</a>
+                    <a href="perfil.html">Admin</a>
+                </nav>
             </div>
-            <nav class="nav">
-                <a href="#">Início</a>
-                <a href="#">Páginas</a>
-                <a href="#">Destaques</a>
-                <a href="#">Assinar</a>
-                <a href="#">Admin</a>
-            </nav>
             <div class="actions">
-                <div class="search">
-                    <input type="text" placeholder="Busca...">
-                    <button class="btn ghost">Busca</button>
+                <div class="search" role="search">
+                    <label for="search-input" class="sr-only">Buscar no site</label>
+                    <input id="search-input" type="text" placeholder="Buscar...">
+                    <button class="btn ghost" aria-label="Buscar">Buscar</button>
                 </div>
-                <button class="btn ghost">Entrar</button>
+                <a class="btn" href="login.html">Entrar</a>
             </div>
         </div>
     </header>
 
-    <!-- Conteúdo Principal -->
     <main class="container">
-        <h1 class="results-title">Resultados para: "trabalho remoto"</h1>
-        
-        <section class="results-list">
-            <!-- Item de Resultado 1 -->
-            <article class="result-card">
-                <div class="result-image-placeholder"></div>
-                <div class="result-info">
-                    <h2>Resultado 1: título de exemplo</h2>
-                    <p>Categoria - 21 Jul 2025</p>
-                </div>
-            </article>
+        <section>
+            <h1>Resultados para: "**trabalho remoto**"</h1>
+            <p style="margin-bottom: var(--lg)">Encontramos 4 resultados em artigos e 1 em páginas.</p>
 
-            <!-- Item de Resultado 2 -->
-            <article class="result-card">
-                <div class="result-image-placeholder"></div>
-                <div class="result-info">
-                    <h2>Resultado 2: título de exemplo</h2>
-                    <p>Categoria - 21 Jul 2025</p>
-                </div>
-            </article>
+            <div class="search-results-list" style="display:flex; flex-direction:column; gap:var(--lg);">
+                <article class="card result-card" style="display:flex; gap:var(--md); border:1px solid var(--border-color); align-items:flex-start;">
+                    <div class="result-image-placeholder" style="flex-shrink:0; width:100px; height:100px; background:var(--card-background-admin); border-radius:var(--radius);"></div>
+                    <div class="result-info">
+                        <h2><a href="#">O Futuro do Trabalho Remoto</a></h2>
+                        <p style="color:var(--muted); font-size:var(--small)">**Categoria** - 21 Jul 2025</p>
+                        <p style="font-size:var(--body)">Um resumo curto do artigo sobre as tendências do trabalho a distância, otimizando a produtividade e a segurança de dados.</p>
+                    </div>
+                </article>
 
-            <!-- Item de Resultado 3 -->
-            <article class="result-card">
-                <div class="result-image-placeholder"></div>
-                <div class="result-info">
-                    <h2>Resultado 3: título de exemplo</h2>
-                    <p>Categoria - 21 Jul 2025</p>
-                </div>
-            </article>
+                <article class="card result-card" style="display:flex; gap:var(--md); border:1px solid var(--border-color); align-items:flex-start;">
+                    <div class="result-image-placeholder" style="flex-shrink:0; width:100px; height:100px; background:var(--card-background-admin); border-radius:var(--radius);"></div>
+                    <div class="result-info">
+                        <h2><a href="#">Ferramentas Essenciais para Equipes Remotas</a></h2>
+                        <p style="color:var(--muted); font-size:var(--small)">**Tecnologia** - 10 Jun 2025</p>
+                        <p style="font-size:var(--body)">Uma lista das melhores ferramentas para comunicação, gerenciamento de projetos e colaboração distribuída.</p>
+                    </div>
+                </article>
 
-            <!-- Item de Resultado 4 -->
-            <article class="result-card">
-                <div class="result-image-placeholder"></div>
-                <div class="result-info">
-                    <h2>Resultado 4: título de exemplo</h2>
-                    <p>Categoria - 21 Jul 2025</p>
                 </div>
-            </article>
-
         </section>
     </main>
 
-    <!-- Rodapé -->
-    <footer class="footer">
-        <div class="container">
-            <div class="links">
-                <a href="#" class="btn ghost">Instagram</a>
-                <a href="#" class="btn ghost">Work</a>
-                <a href="#" class="btn ghost">Bags</a>
-                <a href="#" class="btn ghost">Lamp</a>
-                <a href="#" class="btn ghost">Books</a>
-            </div>
-            <p>&copy; 2025 May Site - Feito por</p>
+    <footer class="footer container">
+        <div class="links">
+            <a href="#">Instagram</a>
+            <a href="#">Work</a>
+            <a href="#">Bags</a>
+            <a href="#">Lamp</a>
+            <a href="#">Books</a>
         </div>
+        <div>© 2025 Meu Site - Meu site.</div>
     </footer>
-    
 </body>
 </html>
-
