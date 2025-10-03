@@ -45,7 +45,7 @@ html, body {
   height: 100%;
 }
 
-body {
+.body.Principal {
   margin: 0;
   font-family: var(--font-family);
   font-size: var(--body);
@@ -58,9 +58,9 @@ body {
   display: grid;
   grid-template-rows: auto 1fr auto; /* Header, Main (expande), Footer */
   grid-template-areas: 
-    "header"
-    "main"
-    "footer";
+    "header header header"
+    "main main main"
+    "footer footer footer";
 }
 
 /* Semântica e Componentes */
@@ -72,6 +72,8 @@ header {
 }
 footer {
     grid-area: footer;
+    height: auto;
+    line-height: auto;
 }
 
 h1, h2, h3, h4 {
@@ -339,9 +341,23 @@ input:focus, textarea:focus, select:focus {
   border-radius: var(--radius);
   cursor: pointer;
 }
-.action-btn.approve { background: var(--success); color: #fff; border-color: var(--success); }
-.action-btn.reject { background: var(--danger); color: #fff; border-color: var(--danger); }
-.action-btn.block { background: #dc3545; color: #fff; border-color: #dc3545; }
+.action-btn.approve {
+   background: var(--success); 
+   color: #fff;
+    border-color: var(--success); 
+  }
+
+.action-btn.reject { 
+  background: var(--danger); 
+  color: #fff;
+   border-color: var(--danger); 
+}
+
+.action-btn.block { 
+  background: #dc3545; 
+  color: #fff; 
+  border-color: #dc3545;
+ }
 
 
 /* Footer */
