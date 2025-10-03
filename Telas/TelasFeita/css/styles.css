@@ -34,12 +34,14 @@
 
   --radius: 8px;
   --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --img-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Base e Grid Principal da Página */
 * {
   box-sizing: border-box;
 }
+
 
 html, body {
   height: 100%;
