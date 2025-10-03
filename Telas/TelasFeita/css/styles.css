@@ -7,15 +7,18 @@
 :root {
   /* Cores */
   --bg: #f8f9fa; /* Fundo mais claro para contraste */
-  --surface: #ffffff; /* Fundo de cards/elementos */
+  --cardElements: #cac7c7; /* Fundo de cards/elementos */
   --muted: #495057; /* Texto secundário/sutil */
   --text-primary: #212529;
-  --accent: #0066ff;
-  --accent-600: #0051cc;
-  --danger: #e02424;
-  --success: #16a34a;
-  --border-color: #dee2e6;
-  --card-background-admin: #f1f3f5; /* Cor de fundo suave para cards internos */
+  --accent: #0066ff; /* Cor primária */
+  --accent-600: #0056d2; /* Tom mais escuro para hover */
+  --btn: #4a8ff7;
+  --red: #e02424;
+  --green: #16a34a;
+  --borderColor: #dee2e6;
+  --cardBackgroundAdmin: #f1f3f5; /* Cor de fundo suave para cards internos */
+  --hColor: #0f172a; /* Cor de cabeçalhos */
+  --headerBg: #bebebe; /* Fundo do header */
 
   /* Tipografia */
   --font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -68,18 +71,20 @@ html, body {
 /* Semântica e Componentes */
 main {
     grid-area: main;
+    padding: var(--md);
+    background: var(--bg);
 }
 header {
     grid-area: header;
-}
+  
+}  
 footer {
     grid-area: footer;
-    height: auto;
-    line-height: auto;
+    background: var(--cardElements);
 }
 
 h1, h2, h3, h4 {
-  color: #0f172a;
+  color:var(--hColor);
   line-height: 1.2;
   margin-top: 0;
   margin-bottom: var(--md);
@@ -97,9 +102,9 @@ a:hover {
 }
 
 
-/* Modal Overlay (Antiga .areaLogin) */
+
 .modal-overlay {
-  display: none; /* Inicia escondido */
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -119,9 +124,12 @@ a:hover {
 .header {
   background: var(--surface);
   border-bottom: 1px solid var(--border-color);
-  position: sticky;
-  top: 0;
-  z-index: 50;
+   background: white;
+    position: sticky; 
+    top: 0;          
+    width: 100%;      
+    z-index: 100;  
+ 
 }
 
 .header-content {
@@ -140,13 +148,6 @@ a:hover {
   gap: var(--md);
 }
 
-.logo {
-  font-weight: 700;
-  font-size: 1.5rem;
-  letter-spacing: 0.5px;
-  color: var(--text-primary);
-}
-
 .nav {
   display: none; /* Esconde o menu principal em mobile */
 }
@@ -156,25 +157,6 @@ a:hover {
   align-items: center;
   gap: var(--sm);
 }
-
-/* Search Input */
-.search {
-  display: none; /* Esconde a busca no header em mobile */
-  align-items: center;
-  gap: var(--sm);
-}
-
-.search input {
-  padding: .5rem .75rem;
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius);
-  transition: border-color 0.2s;
-  width: 100%;
-}
-.search input:focus {
-  border-color: var(--accent);
-}
-
 /* Buttons (Padronização) */
 .btn {
   display: inline-flex;
@@ -188,8 +170,14 @@ a:hover {
   cursor: pointer;
   transition: all 0.2s;
   white-space: nowrap;
-  background: var(--surface);
-  color: var(--muted);
+  background: var(--accent-600);
+  color: var(--bg);
+}
+.sidebarCard {
+  background: var(--cardBackgroundAdmin);
+  padding: var(--md);
+  border-radius: var(--radius);
+  box-shadow: var(--card-shadow);
 }
 
 .btn:hover {
@@ -223,7 +211,7 @@ a:hover {
 }
 
 .card {
-  background: var(--surface);
+  background: var(--cardBackgroundAdmin);
   border-radius: var(--radius);
   box-shadow: var(--card-shadow);
   padding: var(--lg); /* Aumentei o padding para melhor estética */
@@ -297,13 +285,14 @@ input:focus, textarea:focus, select:focus {
   gap: var(--md);
   margin-bottom: var(--lg);
   flex-wrap: wrap; 
+  background: var(--bg);
 }
 .stat {
   flex: 1 1 140px;
   padding: var(--md);
   border-radius: var(--radius);
-  background: var(--surface);
-  border: 1px solid var(--border-color);
+  background: white;
+  border: 1px solid var(--borderColor);
   font-weight: 600;
   text-align: center;
 }
@@ -337,28 +326,28 @@ input:focus, textarea:focus, select:focus {
   padding: .35rem .75rem;
   font-size: var(--small);
   white-space: nowrap;
-  background: var(--bg);
-  color: var(--text-primary);
+  background: var(--green);
+  color: var(--bg);
   border: 1px solid var(--border-color);
   border-radius: var(--radius);
   cursor: pointer;
 }
 .action-btn.approve {
-   background: var(--success); 
+   background: var(--green); 
    color: #fff;
-    border-color: var(--success); 
+    border-color: var(--green); 
   }
 
 .action-btn.reject { 
-  background: var(--danger); 
+  background: var(--red); 
   color: #fff;
-   border-color: var(--danger); 
+   border-color: var(--red); 
 }
 
 .action-btn.block { 
-  background: #dc3545; 
+  background: var(--red); 
   color: #fff; 
-  border-color: #dc3545;
+  border-color: var(--red);
  }
 
 
